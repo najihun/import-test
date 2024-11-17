@@ -36,3 +36,8 @@ resource "aws_instance" "kbsec_ec2" {
     } 
   )
 }
+
+variable "aws_instance_name" {
+  type = string
+  default = "tfe-fdo-test"
+}
