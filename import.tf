@@ -27,14 +27,6 @@ import {
 }
 
 resource "aws_instance" "kbsec_ec2" {
-//  depends_on = [ aws_network_interface.kbsec_nic ]
-  tags = merge(
-    try(var.ec2_tags, null),
-      var.global_tag,
-    {
-      "Name" = var.aws_instance_name
-    } 
-  )
 }
 
 variable "aws_instance_name" {
