@@ -17,8 +17,8 @@ data "aws_instances" "ec2" {
   filter {
     name = "tag:Name"
     values = [var.aws_instance_name]
-    instance_state_names = ["running", "pending", "stopped"]
   }
+  instance_state_names = ["running", "pending", "stopped"]
 }
 
 import {
