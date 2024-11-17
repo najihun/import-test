@@ -28,6 +28,7 @@ import {
 
 resource "aws_instance" "kbsec_ec2" {
   instance_type = "m5.large"
+  ami = "ami-04ea5b2d3c8ceccf8"
 }
 
 variable "aws_instance_name" {
